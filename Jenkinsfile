@@ -20,5 +20,17 @@ pipeline{
                 git branch: 'main', credentialsId: 'github', url: 'https://github.com/jodo0131/complete-pipeline-production'
             }
         }
+
+          stage("Build Application"){
+            steps {
+                sh "mvn clean package"
+            }
+        }
+
+          stage("Test Application"){
+            steps {
+                sh "mvn test"
+            }
+        }
     }
 }
