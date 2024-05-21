@@ -9,7 +9,7 @@ pipeline{
     environment {
         APP_NAME = "complete-production-pipeline"
         RELEASE = "1.0.0"
-        DOCKER_USER = "dockeruser"
+        DOCKER_USER = "jodo0131"
         DOCKER_PASS = 'dockerpass'
         IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
         IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
